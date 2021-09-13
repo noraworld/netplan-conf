@@ -1,0 +1,14 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 192.168.3.2/24
+        - 2400:2410:b3c1:7600:dea6:32ff:fec5:ed06/64
+      gateway4: 192.168.3.1
+      gateway6: fe80::da0f:99ff:fedb:2bad
+      nameservers:
+          addresses: [8.8.8.8, 8.8.4.4]

@@ -4,11 +4,11 @@ network:
   ethernets:
     eth0:
       dhcp4: no
-      dhcp6: no
+      # dhcp6: no
       addresses:
         - 192.168.3.2/24
-        - 2400:2410:cca0:f500:dea6:32ff:fec5:ed06/64
+        # - 2400:2410:cca0:f500:dea6:32ff:fec5:ed06/64
       gateway4: 192.168.3.1
-      gateway6: fe80::da0f:99ff:fedd:adbd
+      # gateway6: fe80::da0f:99ff:fedd:adbd
       nameservers:
           addresses: [8.8.8.8, 8.8.4.4]

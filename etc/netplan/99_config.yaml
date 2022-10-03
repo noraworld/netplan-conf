@@ -11,4 +11,4 @@ network:
       gateway4: 192.168.3.1
       # gateway6: fe80::da0f:99ff:fedd:adbd
       nameservers:
-          addresses: [192.168.3.2]
+          addresses: [1.1.1.1]

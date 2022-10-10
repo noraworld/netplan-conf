@@ -2,13 +2,29 @@ network:
   version: 2
   renderer: networkd
   ethernets:
-    eth0:
+    eth1:
       dhcp4: no
-      # dhcp6: no
       addresses:
         - 192.168.3.2/24
-        # - 2400:2410:cca0:f500:dea6:32ff:fec5:ed06/64
-      gateway4: 192.168.3.1
-      # gateway6: fe80::da0f:99ff:fedd:adbd
+      routes:
+        - to: default
+          via: 192.168.3.1
+        - to: 192.168.3.0/24
+          via: 192.168.3.1
+          table: 101
+      routing-policy:
+        - from: 192.168.3.0/24
+          table: 101
       nameservers:
-          addresses: [1.1.1.1]
+        addresses: [1.1.1.1]
+    eth0:
+      dhcp4: no
+      addresses:
+        - 192.168.82.2/24
+      routes:
+        - to: 192.168.82.0/24
+          via: 192.168.82.1
+          table: 102
+      routing-policy:
+        - from: 192.168.82.0/24
+          table: 102

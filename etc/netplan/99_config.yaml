@@ -17,6 +17,7 @@ network:
           table: 101
       nameservers:
         addresses: [1.1.1.1]
+      ipv6-privacy: true
     eth0:
       dhcp4: no
       addresses:
@@ -31,3 +32,4 @@ network:
           table: 102
       nameservers:
         addresses: [1.1.1.1]
+      ipv6-privacy: true

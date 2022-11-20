@@ -3,17 +3,17 @@ network:
   renderer: networkd
   ethernets:
     eth1:
-      dhcp4: no
+      dhcp4: yes
       addresses:
-        - 192.168.3.2/24
+        - 192.168.150.2/24
       routes:
         - to: default
-          via: 192.168.3.1
-        - to: 192.168.3.0/24
-          via: 192.168.3.1
+          via: 192.168.150.1
+        - to: 192.168.150.0/24
+          via: 192.168.150.1
           table: 101
       routing-policy:
-        - from: 192.168.3.0/24
+        - from: 192.168.150.0/24
           table: 101
       nameservers:
         addresses: [1.1.1.1]

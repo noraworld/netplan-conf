@@ -4,6 +4,9 @@ network:
   ethernets:
     eth1:
       dhcp4: yes
+      dhcp6: false
+      accept-ra: false
+      link-local: []
       addresses:
         - 192.168.150.2/24
       routes:
@@ -20,6 +23,9 @@ network:
       ipv6-privacy: true
     eth0:
       dhcp4: no
+      dhcp6: false
+      accept-ra: false
+      link-local: []
       addresses:
         - 192.168.82.1/24
         - fd00:0:0:3::1/64

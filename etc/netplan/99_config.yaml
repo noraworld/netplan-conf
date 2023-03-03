@@ -19,7 +19,7 @@ network:
         - from: 192.168.150.0/24
           table: 101
       nameservers:
-        addresses: [1.1.1.1]
+        addresses: [192.168.82.1]
       ipv6-privacy: true
     eth0:
       dhcp4: no
@@ -37,5 +37,5 @@ network:
         - from: 192.168.82.0/24
           table: 102
       nameservers:
-        addresses: [1.1.1.1]
+        addresses: [192.168.82.1]
       ipv6-privacy: true

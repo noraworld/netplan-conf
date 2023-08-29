@@ -2,6 +2,7 @@ network:
   version: 2
   renderer: networkd
   ethernets:
+    # https://cosmoz.jp/usage/netconf.html
     eth1:
       dhcp4: yes
       dhcp-identifier: mac

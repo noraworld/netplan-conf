@@ -4,23 +4,9 @@ network:
   ethernets:
     eth1:
       dhcp4: yes
-      dhcp6: false
-      accept-ra: false
-      link-local: []
-      addresses:
-        - 192.168.150.2/24
-      routes:
-        - to: default
-          via: 192.168.150.1
-        - to: 192.168.150.0/24
-          via: 192.168.150.1
-          table: 101
-      routing-policy:
-        - from: 192.168.150.0/24
-          table: 101
-      nameservers:
-        addresses: [192.168.82.1]
-      ipv6-privacy: true
+      dhcp-identifier: mac
+      dhcp6: no
+      optional: true
     eth0:
       dhcp4: no
       dhcp6: false

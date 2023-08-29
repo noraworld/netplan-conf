@@ -5,8 +5,9 @@ network:
     # https://cosmoz.jp/usage/netconf.html (ja)
     eth1:
       dhcp4: yes
-      dhcp-identifier: mac
+      # An IPv6 address may be assigned through router advertisements, even though DHCPv6 is disabled.
       dhcp6: no
+      dhcp-identifier: mac
       optional: true
     eth0:
       dhcp4: no

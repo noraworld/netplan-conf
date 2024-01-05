@@ -1,5 +1,13 @@
-# It is highly recommended to perform "sudo netplan try" before the actual application.
-# Note that previous changes sometimes remain even if new ones are applied.
+# Note 1:
+#   It is highly recommended to perform "sudo netplan try" before the actual application.
+#
+# Note 2:
+#   Note that previous changes sometimes remain even if new ones are applied.
+#
+# Note 3:
+#   Sometimes "sudo netplan try" doesn't revert changes for some reason,
+#   but they should be reverted if you reboot the system because the Git diff is restored
+#   when the system starts up.
 
 network:
   version: 2

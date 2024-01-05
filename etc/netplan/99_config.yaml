@@ -1,3 +1,6 @@
+# It is highly recommended to perform "sudo netplan try" before the actual application.
+# Note that previous changes sometimes remain even if new ones are applied.
+
 network:
   version: 2
   renderer: networkd

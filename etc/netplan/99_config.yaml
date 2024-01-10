@@ -20,7 +20,7 @@ network:
       dhcp6: no
       dhcp-identifier: mac
       optional: true
-    eth0:
+    wlan0:
       dhcp4: no
       dhcp6: false
       accept-ra: false

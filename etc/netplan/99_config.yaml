@@ -14,13 +14,13 @@ network:
   renderer: networkd
   ethernets:
     # https://cosmoz.jp/usage/netconf.html (ja)
-    eth1:
+    eth0:
       dhcp4: yes
       # An IPv6 address may be assigned through router advertisements, even though DHCPv6 is disabled.
       dhcp6: no
       dhcp-identifier: mac
       optional: true
-    eth0:
+    eth1:
       dhcp4: no
       dhcp6: false
       accept-ra: false

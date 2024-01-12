@@ -38,3 +38,7 @@ network:
       nameservers:
         addresses: [192.168.82.1]
       ipv6-privacy: true
+    wlan0:
+      dhcp4: no
+      addresses:
+        - 192.168.83.1/24

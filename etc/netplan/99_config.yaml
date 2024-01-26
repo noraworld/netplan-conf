@@ -12,23 +12,22 @@
 network:
   version: 2
   renderer: networkd
+  # https://cosmoz.jp/usage/netconf.html (ja)
   ethernets:
-    # https://cosmoz.jp/usage/netconf.html (ja)
-    #
     # An original LAN port connected to WAN
     eth0:
-      dhcp4: yes
-      dhcp-identifier: mac
+      dhcp4: true
       optional: true
+      dhcp-identifier: mac
     # An incorporated Wi-Fi interface, which works as an access point managed by hostapd
     wlan0:
-      dhcp4: no
+      dhcp4: false
+      optional: true
       addresses:
         - 192.168.82.1/24
-      optional: true
     # An adapter LAN port connected to the other Wi-Fi router
     eth1:
-      dhcp4: no
+      dhcp4: false
+      optional: true
       addresses:
         - 192.168.80.1/24
-      optional: true
